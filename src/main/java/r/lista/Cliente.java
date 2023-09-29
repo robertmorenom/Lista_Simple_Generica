@@ -34,11 +34,14 @@ public class Cliente {
         Perro p2 = new Perro("Juan", 5);
         Perro p3 = new Perro("Cachirulo", 8);
         Perro p4 = new Perro("Giovani Vasquéz", 10);
+        Perro p5 = new Perro("Percho", 1);
         
         lista1.add(p1);
         lista1.add(p2);
         lista1.add(p3);
         lista1.add(p4);
+        lista1.addOrdered(p5);
+        lista1.addOrdered(new Perro("Triki", 2));
         System.out.println("La primera lista es: ");
         lista1.print();
         
@@ -53,16 +56,13 @@ public class Cliente {
         lista2.print();
         
         LinkedList<Celular> lista3 = new LinkedList();
-        Celular c1 = new Celular(311278543,"Verde");
-        Celular c2 = new Celular(322456321,"Fucsia");
-        Celular c3 = new Celular(316732412,"Amarillo");
-        Celular c4 = new Celular(314250657,"Rojo");
         System.out.println("");
         System.out.println("\nLa tercera lista es: ");
-        lista3.add(c1);
-        lista3.add(c2);
-        lista3.addBefore(c3);
-        lista3.addAfter(c4);
+        lista3.addOrdered(new Celular(64,"Gris"));
+        lista3.add(new Celular(32,"Rojo"));
+        lista3.add(new Celular(256,"Verde"));
+        lista3.addBefore(new Celular(128,"Azul"));
+        lista3.addAfter(new Celular(512,"Amarillo"));
         lista3.print();
     }
 }
