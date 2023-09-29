@@ -4,22 +4,22 @@
  */
 package r.lista;
 
-
 public class Celular {
-    private int numero;
+
+    private int almacenamiento;
     private String color;
 
-    public Celular(int numero, String color) {
-        this.numero = numero;
+    public Celular(int almacenamiento, String color) {
+        this.almacenamiento = almacenamiento;
         this.color = color;
     }
 
     public int getNumero() {
-        return numero;
+        return almacenamiento;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setNumero(int almacenamiento) {
+        this.almacenamiento = almacenamiento;
     }
 
     public String getColor() {
@@ -32,8 +32,7 @@ public class Celular {
 
     @Override
     public String toString() {
-        return "Celular{" + "numero=" + numero + ", color=" + color + '}';
+        return "Celular{" + "almacenamiento=" + almacenamiento + ", color=" + color + '}';
     }
-    
-    
+
 }
