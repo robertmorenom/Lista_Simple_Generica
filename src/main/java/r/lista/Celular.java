@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package r.lista;
 
-public class Celular {
+public class Celular implements Comparable<Celular> {
 
     private int almacenamiento;
     private String color;
@@ -14,11 +10,11 @@ public class Celular {
         this.color = color;
     }
 
-    public int getNumero() {
+    public int getAlmacenamiento() {
         return almacenamiento;
     }
 
-    public void setNumero(int almacenamiento) {
+    public void setAlmacenamiento(int almacenamiento) {
         this.almacenamiento = almacenamiento;
     }
 
@@ -35,4 +31,15 @@ public class Celular {
         return "Celular{" + "almacenamiento=" + almacenamiento + ", color=" + color + '}';
     }
 
+    @Override
+    public int compareTo(Celular o) {
+        if (this.getAlmacenamiento() > o.getAlmacenamiento()) {
+            return 1;
+        } else if (this.getAlmacenamiento() < o.getAlmacenamiento()) {
+            return -1;
+        }
+
+        return 0;
+
+    }
 }
