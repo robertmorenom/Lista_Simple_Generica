@@ -63,5 +63,13 @@ public class Cliente {
         lista3.addBefore(new Celular(128,"Azul"));
         lista3.addAfter(new Celular(512,"Amarillo"));
         lista3.print();
+        
+        DoubleLinkedList<Perro> dl1 = new DoubleLinkedList();
+        dl1.add(new Perro("Juan", 12));
+        dl1.add(new Perro("Robers", 18));
+        dl1.add(new Perro("Nefer", 22));
+        System.out.println("");
+        System.out.println("\nLa lista doblemente enlazada es: ");
+        dl1.print();
     }
 }

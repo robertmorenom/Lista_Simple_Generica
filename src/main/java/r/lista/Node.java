@@ -4,6 +4,15 @@ public class Node<T> implements Comparable<Node<T>> {
 
     private T data;
     private Node next;
+    private Node prev;
+
+    public Node getPrev() {
+        return prev;
+    }
+
+    public void setPrev(Node prev) {
+        this.prev = prev;
+    }
 
     public T getData() {
         return data;
@@ -25,12 +34,10 @@ public class Node<T> implements Comparable<Node<T>> {
     public int compareTo(Node<T> o) {
         return 0;
     }
-    
+
     @Override
     public String toString() {
         return "Node{" + "data=" + data.toString() + '}';
     }
 
-    
-    
 }
