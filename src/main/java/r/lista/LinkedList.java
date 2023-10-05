@@ -8,14 +8,12 @@ public class LinkedList<T>{
     public void add(T valor) {
         Node p = head;
         if (head == null) {
-            head = new Node();
-            head.setData(valor);
+            head = new Node(valor);
         } else {
             while (p.getNext() != null) {
                 p = p.getNext();
             }
-            Node n = new Node();
-            n.setData(valor);
+            Node n = new Node(valor);  
             p.setNext(n);
         }
 

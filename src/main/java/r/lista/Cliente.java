@@ -28,7 +28,7 @@ public class Cliente {
         System.out.println("Eliminando el nodo de la mitad de la lista\n");
         obj.print();*/
         
-        LinkedList<Perro> lista1 = new LinkedList();
+        /*LinkedList<Perro> lista1 = new LinkedList();
         Perro p1 = new Perro("Toby", 3);
         Perro p2 = new Perro("Juan", 5);
         Perro p3 = new Perro("Cachirulo", 8);
@@ -62,7 +62,7 @@ public class Cliente {
         lista3.add(new Celular(256,"Verde"));
         lista3.addBefore(new Celular(128,"Azul"));
         lista3.addAfter(new Celular(512,"Amarillo"));
-        lista3.print();
+        lista3.print();*/
         
         DoubleLinkedList<Perro> dl1 = new DoubleLinkedList();
         dl1.add(new Perro("Juan", 12));
@@ -71,5 +71,24 @@ public class Cliente {
         System.out.println("");
         System.out.println("\nLa lista doblemente enlazada es: ");
         dl1.print();
+        dl1.deleteEnd();
+        System.out.println("");
+        System.out.println("\nLa nueva lista doblemente enlazada es: ");
+        dl1.print();
+        
+        CircularLinkedList<Perro> cl1 = new CircularLinkedList();
+        cl1.add(new Perro("Tito", 12));
+        cl1.add(new Perro("Juan", 5));
+        System.out.println("");
+        System.out.println("\nLa lista circular es: ");
+        cl1.print();
+        cl1.deleteEnd();
+        System.out.println("");
+        System.out.println("\nLa lista circular es: ");
+        cl1.print();
+        
+        
     }
+    
+       
 }

@@ -6,6 +6,13 @@ public class Node<T> implements Comparable<Node<T>> {
     private Node next;
     private Node prev;
 
+    public Node() {
+    }
+
+    public Node(T data) {
+        this.data = data;
+    }
+    
     public Node getPrev() {
         return prev;
     }
