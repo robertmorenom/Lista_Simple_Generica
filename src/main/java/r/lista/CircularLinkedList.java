@@ -9,7 +9,6 @@ public class CircularLinkedList<T> {
         Node p = head;
         if (head == null) {
             head = new Node(valor);
-
             head.setNext(head);
         } else {
             while (p.getNext() != head) {

@@ -28,7 +28,7 @@ public class Perro implements Comparable<Perro> {
 
     @Override
     public String toString() {
-        return "Perro{" + "nombre=" + nombre + ", edad=" + edad + '}';
+        return "[" + "nombre = " + nombre + ", edad = " + edad + ']';
     }
 
     @Override

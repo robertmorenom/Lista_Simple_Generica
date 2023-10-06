@@ -66,7 +66,7 @@ public class Cliente {
         
         DoubleLinkedList<Perro> dl1 = new DoubleLinkedList();
         dl1.add(new Perro("Juan", 12));
-        dl1.add(new Perro("Robers", 18));
+        dl1.add(new Perro("Pepe", 18));
         dl1.add(new Perro("Nefer", 22));
         System.out.println("");
         System.out.println("\nLa lista doblemente enlazada es: ");
@@ -87,7 +87,13 @@ public class Cliente {
         System.out.println("\nLa lista circular es: ");
         cl1.print();
         
-        
+        CircularDoubleLinkedList<Perro> cd1 = new CircularDoubleLinkedList();
+        cd1.add(new Perro("Tito", 2));
+        cd1.add(new Perro("Juan", 3));
+        //cd1.deleteEnd();
+        System.out.println("");
+        System.out.println("\nLa lista circular doblemente enlazada es: ");
+        cd1.print();
     }
     
        
