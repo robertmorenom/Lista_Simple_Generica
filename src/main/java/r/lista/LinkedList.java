@@ -18,6 +18,47 @@ public class LinkedList<T>{
         }
 
     }
+    
+        public void sortAscendent() {
+        boolean bandera = true;
+        while (bandera) {
+            bandera = false;
+            Node p = head;
+            Node q = p.getNext();
+            while (q != null) {
+                if (((Comparable) p.getData()).compareTo(q.getData()) > 0) {
+                    bandera = true;
+                    T aux = (T) p.getData();
+                    p.setData(q.getData());
+                    q.setData(aux);
+                }
+                p = p.getNext();
+                q = q.getNext();
+            }
+
+        }
+    }
+
+    public void sortDescendent() {
+        boolean bandera = true;
+        while (bandera) {
+            bandera = false;
+            Node p = head;
+            Node q = p.getNext();
+            while (q != null) {
+                if (((Comparable) p.getData()).compareTo(q.getData()) < 0) {
+                    bandera = true;
+                    T aux = (T) p.getData();
+                    p.setData(q.getData());
+                    q.setData(aux);
+                }
+                p = p.getNext();
+                q = q.getNext();
+            }
+
+        }
+    }
+
 
     public void print() {
         Node p = head;

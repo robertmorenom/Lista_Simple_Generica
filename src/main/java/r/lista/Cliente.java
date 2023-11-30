@@ -94,6 +94,24 @@ public class Cliente {
         System.out.println("");
         System.out.println("\nLa lista circular doblemente enlazada es: ");
         cd1.print();
+        
+        LinkedList<Integer> l1 = new LinkedList();
+        
+        System.out.println("");
+        l1.add(200);
+        l1.add(1);
+        l1.add(34);
+        l1.add(8);
+        l1.add(11);
+        l1.print();
+
+        l1.sortAscendent();
+        System.out.println("");
+        l1.print();
+
+        l1.sortDescendent();
+        System.out.println("");
+        l1.print();
     }
     
        
