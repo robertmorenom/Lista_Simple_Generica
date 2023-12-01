@@ -1,9 +1,9 @@
 package r.lista;
 
-
 public class Cliente {
+
     public static void main(String[] args) {
-        
+
         /*LinkedList<Integer> obj = new LinkedList();
         obj.add(5);
         obj.add(3);
@@ -27,8 +27,7 @@ public class Cliente {
         System.out.println("---------------------------");
         System.out.println("Eliminando el nodo de la mitad de la lista\n");
         obj.print();*/
-        
-        /*LinkedList<Perro> lista1 = new LinkedList();
+ /*LinkedList<Perro> lista1 = new LinkedList();
         Perro p1 = new Perro("Toby", 3);
         Perro p2 = new Perro("Juan", 5);
         Perro p3 = new Perro("Cachirulo", 8);
@@ -63,56 +62,67 @@ public class Cliente {
         lista3.addBefore(new Celular(128,"Azul"));
         lista3.addAfter(new Celular(512,"Amarillo"));
         lista3.print();*/
-        
-        DoubleLinkedList<Perro> dl1 = new DoubleLinkedList();
-        dl1.add(new Perro("Juan", 12));
-        dl1.add(new Perro("Pepe", 18));
-        dl1.add(new Perro("Nefer", 22));
-        System.out.println("");
-        System.out.println("\nLa lista doblemente enlazada es: ");
-        dl1.print();
-        dl1.deleteEnd();
-        System.out.println("");
-        System.out.println("\nLa nueva lista doblemente enlazada es: ");
-        dl1.print();
-        
-        CircularLinkedList<Perro> cl1 = new CircularLinkedList();
-        cl1.add(new Perro("Tito", 12));
-        cl1.add(new Perro("Juan", 5));
-        System.out.println("");
-        System.out.println("\nLa lista circular es: ");
-        cl1.print();
-        cl1.deleteEnd();
-        System.out.println("");
-        System.out.println("\nLa lista circular es: ");
-        cl1.print();
-        
-        CircularDoubleLinkedList<Perro> cd1 = new CircularDoubleLinkedList();
-        cd1.add(new Perro("Tito", 2));
-        cd1.add(new Perro("Juan", 3));
-        //cd1.deleteEnd();
-        System.out.println("");
-        System.out.println("\nLa lista circular doblemente enlazada es: ");
-        cd1.print();
-        
+//        DoubleLinkedList<Perro> dl1 = new DoubleLinkedList();
+//        dl1.add(new Perro("Juan", 12));
+//        dl1.add(new Perro("Pepe", 18));
+//        dl1.add(new Perro("Nefer", 22));
+//        System.out.println("");
+//        System.out.println("\nLa lista doblemente enlazada es: ");
+//        dl1.print();
+//        dl1.deleteEnd();
+//        System.out.println("");
+//        System.out.println("\nLa nueva lista doblemente enlazada es: ");
+//        dl1.print();
+//        
+//        CircularLinkedList<Perro> cl1 = new CircularLinkedList();
+//        cl1.add(new Perro("Tito", 12));
+//        cl1.add(new Perro("Juan", 5));
+//        System.out.println("");
+//        System.out.println("\nLa lista circular es: ");
+//        cl1.print();
+//        cl1.deleteEnd();
+//        System.out.println("");
+//        System.out.println("\nLa lista circular es: ");
+//        cl1.print();
+//        
+//        CircularDoubleLinkedList<Perro> cd1 = new CircularDoubleLinkedList();
+//        cd1.add(new Perro("Tito", 2));
+//        cd1.add(new Perro("Juan", 3));
+//        //cd1.deleteEnd();
+//        System.out.println("");
+//        System.out.println("\nLa lista circular doblemente enlazada es: ");
+//        cd1.print();
         LinkedList<Integer> l1 = new LinkedList();
-        
+
         System.out.println("");
         l1.add(200);
         l1.add(1);
         l1.add(34);
         l1.add(8);
         l1.add(11);
+        System.out.println("\nLa lista desordenada es: ");
         l1.print();
 
         l1.sortAscendent();
         System.out.println("");
+        System.out.println("\nLa lista ordenada ascendentemente queda: ");
         l1.print();
 
         l1.sortDescendent();
         System.out.println("");
+        System.out.println("\nLa lista ordenada descendentemente queda: ");
         l1.print();
+
+        System.out.println("");
+        System.out.println("\nEl tamaño de la lista es: ");
+        l1.imprimirTamaño();
+        
+       LinkedList<Integer> l2 = new LinkedList(); 
+       l2.addOrdered(833);
+       l2.addOrdered(21);
+       l2.addOrdered(2);
+       l2.print();
+
     }
-    
-       
+
 }

@@ -1,6 +1,6 @@
 package r.lista;
 
-public class LinkedList<T>{
+public class LinkedList<T> {
 
     private Node head;
     private int size;
@@ -13,13 +13,13 @@ public class LinkedList<T>{
             while (p.getNext() != null) {
                 p = p.getNext();
             }
-            Node n = new Node(valor);  
+            Node n = new Node(valor);
             p.setNext(n);
         }
-
+        size++;
     }
-    
-        public void sortAscendent() {
+
+    public void sortAscendent() {
         boolean bandera = true;
         while (bandera) {
             bandera = false;
@@ -59,16 +59,29 @@ public class LinkedList<T>{
         }
     }
 
+    public void ordenarSeleccion() {
+        for (int i = 0; i < size; i++) {
+        Node p = head;
+        Node q = p.getNext();
+        }
+        
+    }
 
     public void print() {
         Node p = head;
         while (p != null) {
             System.out.print(p.getData().toString() + " --> ");
             p = p.getNext();
+
         }
 
     }
 
+    public void imprimirTamaño(){
+        System.out.println(size);
+    }
+    
+    
     public void addBefore(T data) {
         if (head == null) {
             head = new Node();
@@ -119,10 +132,10 @@ public class LinkedList<T>{
             while (aux != null) {
                 if (aux.getNext() == null) {
                     anterior.setNext(null);
-                } 
+                }
                 aux = aux.getNext();
                 anterior = anterior.getNext();
-              
+
             }
         }
         size--;
@@ -148,6 +161,7 @@ public class LinkedList<T>{
         }
 
     }
+
     public void addOrdered(T val) {
         Node nuevo = new Node();
         nuevo.setData(val);
@@ -160,7 +174,7 @@ public class LinkedList<T>{
             //1 si yo soy mayor
             //0 si somos iguales
             //-1 si yo soy menor
-            if (((Comparable)p.getData()).compareTo(val) > 0) {
+            if (((Comparable) p.getData()).compareTo(val) > 0) {
                 //si esto se cumple, es porque mi cabeza es mayor que el nuevo dato, por logica debo agregarlo al inicio
                 nuevo.setNext(p);
                 head = nuevo;
@@ -170,7 +184,7 @@ public class LinkedList<T>{
                     //por logica, debo ingresarlo despues mi cabeza
                     p.setNext(nuevo);
                 } else {
-                    while (p!= null && ((Comparable)p.getData()).compareTo(val) < 0) {
+                    while (p != null && ((Comparable) p.getData()).compareTo(val) < 0) {
                         p = p.getNext();
                     }
                     Node q = head;
@@ -187,7 +201,7 @@ public class LinkedList<T>{
     @Override
     public String toString() {
         String lista = "";
-        for(Node a = head; a != null; a = a.getNext()){
+        for (Node a = head; a != null; a = a.getNext()) {
             lista += " " + a.toString();
         }
         return lista;
