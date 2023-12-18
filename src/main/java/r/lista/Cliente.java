@@ -93,35 +93,38 @@ public class Cliente {
 //        System.out.println("\nLa lista circular doblemente enlazada es: ");
 //        cd1.print();
         LinkedList<Integer> l1 = new LinkedList();
-
         System.out.println("");
-        l1.add(200);
-        l1.add(1);
-        l1.add(34);
-        l1.add(8);
-        l1.add(11);
+        l1.add(100);
+        l1.add(61);
+        l1.add(39);
+        l1.add(20);
+        l1.add(5);
         System.out.println("\nLa lista desordenada es: ");
         l1.print();
 
+        System.out.println("");
+        l1.ordenarSeleccion();
+        System.out.println("\nLa lista ordenada por selección es: ");
+        l1.print();
+
+        System.out.println("");
         l1.sortAscendent();
-        System.out.println("");
-        System.out.println("\nLa lista ordenada ascendentemente queda: ");
+        System.out.println("\nLa lista ordenada por burbuja ascendente es: ");
         l1.print();
 
+        System.out.println("");
         l1.sortDescendent();
-        System.out.println("");
-        System.out.println("\nLa lista ordenada descendentemente queda: ");
+        System.out.println("\nLa lista ordenada por burbuja descendente queda: ");
         l1.print();
 
+        LinkedList<Integer> l2 = new LinkedList();
+
+        l2.addOrdered(833);
+        l2.addOrdered(21);
+        l2.addOrdered(2);
         System.out.println("");
-        System.out.println("\nEl tamaño de la lista es: ");
-        l1.imprimirTamaño();
-        
-       LinkedList<Integer> l2 = new LinkedList(); 
-       l2.addOrdered(833);
-       l2.addOrdered(21);
-       l2.addOrdered(2);
-       l2.print();
+        System.out.println("\nLa lista ordenada por inserción es: ");
+        l2.print();
 
     }
 

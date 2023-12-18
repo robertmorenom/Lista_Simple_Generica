@@ -19,6 +19,7 @@ public class LinkedList<T> {
         size++;
     }
 
+    //Burbuja de menor a mayor
     public void sortAscendent() {
         boolean bandera = true;
         while (bandera) {
@@ -39,6 +40,7 @@ public class LinkedList<T> {
         }
     }
 
+    //Burbuja de mayor a menor
     public void sortDescendent() {
         boolean bandera = true;
         while (bandera) {
@@ -60,11 +62,26 @@ public class LinkedList<T> {
     }
 
     public void ordenarSeleccion() {
-        for (int i = 0; i < size; i++) {
         Node p = head;
-        Node q = p.getNext();
+        Node q;
+        Node menor;
+        while (p != null) {
+            q = p;
+            menor = q;
+            while (q != null) {
+                if (((Comparable) q.getData()).compareTo(menor.getData()) < 0) {
+                    menor = q;
+                }
+                q = q.getNext();
+
+            }
+            T aux = (T) p.getData();
+            p.setData(menor.getData());
+            menor.setData(aux);
+            p = p.getNext();
+
         }
-        
+
     }
 
     public void print() {
@@ -77,11 +94,10 @@ public class LinkedList<T> {
 
     }
 
-    public void imprimirTamaño(){
+    public void imprimirTamaño() {
         System.out.println(size);
     }
-    
-    
+
     public void addBefore(T data) {
         if (head == null) {
             head = new Node();
@@ -162,6 +178,7 @@ public class LinkedList<T> {
 
     }
 
+    //Ordenaminto por inseción
     public void addOrdered(T val) {
         Node nuevo = new Node();
         nuevo.setData(val);
